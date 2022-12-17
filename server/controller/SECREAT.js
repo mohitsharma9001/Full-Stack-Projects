@@ -1,0 +1,1 @@
+export const secreat = "sfhsiuh!@#5841asayu!@#j$%jdsfdgsdf545";
