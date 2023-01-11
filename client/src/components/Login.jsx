@@ -31,26 +31,7 @@ const dispatch = useDispatch();
        }
 
     const handleSubmit =async (e)=>{
-        // try {
-        //     let data = await fetch('http://localhost:8000/user/login',{
-        //       method: 'POST',
-        //       headers: {
-        //         'Content-Type': 'application/json'
-        //       },
-        //       body: JSON.stringify(loginUser)
-        //     })
-        //   let response = await data.json();
-        //     if(response){
-        //       alert('login success');
-        //       navigate("/add")
-        //      } else{
-        //         alert("Kindly register first !");
-               
-        //     }
-        //   } catch (error) {
-        //     alert("Kindly register first !");
-        //     console.log(error);
-        //   }
+        
         let url = "http://localhost:8000/user/login";
         axios.post(url, loginUser).
         then((res)=>{

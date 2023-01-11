@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom"
 import { FormControl, FormGroup, Input, InputLabel,styled, Typography ,Button } from '@mui/material'
+import { useSelector } from 'react-redux'
 import React from 'react'
 import { addUser } from '../services/api'
 const Container = styled(FormGroup)`
@@ -18,12 +19,19 @@ const defaultValue = {
 
 export const AddUser = () => {
 const [user,setUser] = React.useState(defaultValue)
+const isLoggedIn = useSelector(store => store.isLoggedIn);
 const navigate = useNavigate()
 
     const onsubmitForm = (e)=>{
         setUser({...user , [e.target.name] : e.target.value})
      console.log(user)
     }
+
+    React.useEffect(()=>{
+       if(!isLoggedIn){
+          navigate('/login')
+       }
+    },[isLoggedIn])
 
     const AddUserDetails =async ()=>{
         if(user.name === "" || user.email === "" || user.username === "" || user.phone === ""){

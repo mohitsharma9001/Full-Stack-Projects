@@ -1,4 +1,5 @@
 import express from "express";
+// require('dotenv').config();
 import { connection } from "./database/db.js";
 import router from "./routes/Route.js"
 import userRouter from "./routes/UserRoutes.js"
