@@ -57,7 +57,7 @@ return (
     <div>
       <StyledTable>
           <THead>
-            <TableCell>Id</TableCell>
+        
             <TableCell>Name</TableCell>
             <TableCell>UserName</TableCell>
             <TableCell>Email</TableCell>
@@ -69,7 +69,7 @@ return (
          {
           user.map((data)=>{
            return <TRow key={data.id}>
-                     <TableCell>{data._id}</TableCell>
+                     
                      <TableCell>{data.name}</TableCell>
                      <TableCell>{data.username}</TableCell>
                      <TableCell>{data.email}</TableCell>
